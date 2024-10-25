@@ -80,3 +80,39 @@
   </tr>
   
 </table>
+
+
+
+
+# Nuestro Equipo
+
+A continuación se presenta el equipo de desarrollo:
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://via.placeholder.com/100" width="100" alt="Erick">
+      <br>
+      <strong>Erick</strong>
+      <br>
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a> |
+      <a href="https://twitter.com" target="_blank">Twitter</a>
+    </td>
+    <td align="center">
+      <img src="https://via.placeholder.com/100" width="100" alt="kimberly">
+      <br>
+      <strong>kimberly villeda </strong>
+      <br>
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a> |
+      <a href="https://github.com" target="_blank">GitHub</a>
+    </td>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/f039df30-2298-429c-b153-a1cd9671095e" width="100" alt="paolo">
+      <br>
+      <strong>paolo</strong>
+      <br>
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a> |
+      <a href="https://instagram.com" target="_blank">Instagram</a>
+    </td>
+  </tr>
+</table>
