@@ -116,3 +116,16 @@ A continuación se presenta el equipo de desarrollo:
     </td>
   </tr>
 </table>
+
+
+## Estos fueron los procesos a realizar en nuestro proyecto
+
+1. **Investigación Inicial**: Analizamos los requisitos y realizamos una investigación para definir los objetivos del proyecto.
+2. **Planificación**: Diseñamos la arquitectura del sistema y definimos el stack de tecnologías que utilizaríamos.
+3. **Desarrollo de API**: Implementamos la API utilizando Spring Boot y la conectamos a MySQL para manejar los datos.
+4. **Integración de ChatGPT y Telegram**: Configuramos y probamos la integración entre la API de ChatGPT y Telegram utilizando BootFather.
+5. **Documentación con Swagger**: Añadimos documentación a nuestra API con Swagger para facilitar el uso y las pruebas.
+6. **Pruebas y Depuración**: Realizamos pruebas unitarias y de integración para asegurar el funcionamiento correcto de cada módulo.
+7. **Implementación Final**: Desplegamos el proyecto y verificamos la funcionalidad completa.
+
+Estos pasos nos permitieron estructurar y completar el proyecto de manera organizada y efectiva.
