@@ -7,7 +7,7 @@
 
 
 
-![cover](https://github.com/user-attachments/assets/c96bcc75-a81b-4916-9c4a-10ccb9efef9d)
+![cover](https://github.com/user-attachments/assets/9e61c141-7162-4856-8e49-e5032c4c1474)
 
 # VER ONLINE: [:arrow_right: PREVIEW :arrow_left:](https://airman-project.vercel.app/) 
 
