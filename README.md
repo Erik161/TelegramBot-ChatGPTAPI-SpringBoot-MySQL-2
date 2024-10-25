@@ -1,7 +1,8 @@
 <div align="center">
   <h1>
-      Grupo 4  TelegramBot-ChatGPTAPI "PROYECTO FINAL"
+      TelegramBot-ChatGPTAPI "PROYECTO FINAL"
   </h1> 
+  "Grupo 4"
 </div>
 
 
