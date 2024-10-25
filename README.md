@@ -4,7 +4,8 @@
   </h1> 
 </div>
 
-![cover](https://user-images.githubusercontent.com/26189854/178131852-adaad2a1-62bd-412c-8f60-a6c8c29c6c1c.png)
+
+![cover](https://github.com/user-attachments/assets/c96bcc75-a81b-4916-9c4a-10ccb9efef9d)
 
 ![180712585-14300708-28c6-4a47-bf35-2a3e496169fb](https://user-images.githubusercontent.com/26189854/180832395-d0bd4d8f-cb59-4153-aa30-74280abd6fba.png)
 
