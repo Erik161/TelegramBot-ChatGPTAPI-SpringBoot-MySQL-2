@@ -1,5 +1,6 @@
 package umg.TelegramBot.Service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
@@ -16,29 +17,32 @@ public class TelegramBotService extends TelegramLongPollingBot {
     @Value("${telegram.bot.token}")
     private String botToken;
 
-;
+    @Autowired
+    private OpenAIService openAIService;
+
     @Override
     public void onUpdateReceived(Update update) {
-        // Se obtiene el mensaje escrito por el usuario
-        final String messageTextReceived = update.getMessage().getText();
+        // Verificar que el mensaje sea de texto
+        if (update.hasMessage() && update.getMessage().hasText()) {
+            String messageTextReceived = update.getMessage().getText();
+            long chatId = update.getMessage().getChatId();
 
-        System.out.println("Escribieron en el bot " + messageTextReceived);
+            System.out.println("Mensaje recibido: " + messageTextReceived);
 
-        // Se obtiene el id de chat del usuario
-        final long chatId = update.getMessage().getChatId();
+            // Obtener la respuesta de OpenAI
+            String botResponse = openAIService.getChatResponse(messageTextReceived);
 
-        // Se crea un objeto mensaje
-        SendMessage message = new SendMessage();
-        message.setChatId(chatId);
-        message.setText("Pruebas conexion con el Bot de Telegram");
+            // Enviar la respuesta al usuario
+            SendMessage message = new SendMessage();
+            message.setChatId(String.valueOf(chatId));
+            message.setText(botResponse);
 
-        try {
-            // Se envía el mensaje
-            execute(message);
-        } catch (TelegramApiException e) {
-            e.printStackTrace();
+            try {
+                execute(message);
+            } catch (TelegramApiException e) {
+                e.printStackTrace();
+            }
         }
-
     }
 
 
