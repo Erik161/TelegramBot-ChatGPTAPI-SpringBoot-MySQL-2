@@ -86,7 +86,7 @@
 
 # Nuestro Equipo
 
-A continuación se presenta el equipo de desarrollo:
+
 
 <table>
   <tr>
@@ -118,14 +118,44 @@ A continuación se presenta el equipo de desarrollo:
 </table>
 
 
-## Estos fueron los procesos a realizar en nuestro proyecto
+Guía para Integrar un Bot de Telegram en Spring Boot
 
-1. **Investigación Inicial**: Analizamos los requisitos y realizamos una investigación para definir los objetivos del proyecto.
-2. **Planificación**: Diseñamos la arquitectura del sistema y definimos el stack de tecnologías que utilizaríamos.
-3. **Desarrollo de API**: Implementamos la API utilizando Spring Boot y la conectamos a MySQL para manejar los datos.
-4. **Integración de ChatGPT y Telegram**: Configuramos y probamos la integración entre la API de ChatGPT y Telegram utilizando BootFather.
-5. **Documentación con Swagger**: Añadimos documentación a nuestra API con Swagger para facilitar el uso y las pruebas.
-6. **Pruebas y Depuración**: Realizamos pruebas unitarias y de integración para asegurar el funcionamiento correcto de cada módulo.
-7. **Implementación Final**: Desplegamos el proyecto y verificamos la funcionalidad completa.
+1. Seleccionamos la tecnología adecuada
+Para integrar un bot en nuestra aplicación, decidimos usar la API de bots de Telegram. Esta opción nos pareció confiable y tiene una documentación detallada. Nos aseguramos de revisarla bien para entender sus capacidades y requisitos técnicos; pueden verla https://core.telegram.org/bots
 
-Estos pasos nos permitieron estructurar y completar el proyecto de manera organizada y efectiva.
+2 . Agregamos la dependencia de Telegram Bots en nuestro proyecto
+Para que nuestra aplicación de Spring Boot se comunique con Telegram, incluimos una dependencia en el archivo pom.xml. Esta dependencia (telegrambots) contiene las herramientas necesarias para que el bot funcione con Telegram. La configuración es la siguiente:
+
+<!-- Dependencia para interactuar con Telegram -->
+<dependency>
+    <groupId>org.telegram</groupId>
+    <artifactId>telegrambots</artifactId>
+    <version>6.9.7.1</version>
+</dependency>
+
+3. Creamos un paquete llamado service en el proyecto
+Para mantener el código organizado, creamos un paquete llamado service, donde incluimos la clase principal de integración del bot. Esta clase gestiona la lógica de interacción con Telegram, y decidimos llamarla TelegramBotService, aunque cualquier otro nombre claro también hubiera funcionado.
+
+4. Extendimos la clase TelegramLongPollingBot
+En la clase TelegramBotService, la hicimos extender TelegramLongPollingBot, una clase de la API que se encarga de recibir y procesar los mensajes. Esta herencia simplifica nuestro desarrollo, permitiéndonos enfocarnos en definir las respuestas que queremos que dé el bot.
+
+public class TelegramBotService extends TelegramLongPollingBot {
+    // Aquí va la implementación del bot
+}
+5. Sobrescribimos los métodos clave para configurar el bot
+Para que el bot funcionara correctamente, sobrescribimos los métodos getBotUsername y getBotToken. getBotUsername devuelve el nombre del bot, y getBotToken contiene el token de autenticación. Configuramos estos métodos para devolver el nombre y el token específicos de nuestro bot:
+@Override
+public String getBotUsername() {
+    return "nombre_de_nuestro_bot"; // Sustituido con el nombre real del bot
+}
+
+@Override
+public String getBotToken() {
+    return "nuestro_apikey"; // Sustituido con el token proporcionado por BotFather
+}
+6. Creamos el bot en Telegram usando BotFather
+Para obtener el nombre y el token necesarios, utilizamos BotFather, el bot oficial de Telegram para gestionar bots. En Telegram, buscamos @BotFather, iniciamos una conversación y usamos el comando /newbot para crear uno nuevo. Asignamos un nombre que termina en "bot", como lo exige Telegram, y BotFather nos proporcionó un token de API. Luego, pegamos este token en el método getBotToken y añadimos el nombre en getBotUsername.
+
+7. Activamos el bot en Telegram
+Finalmente, abrimos el bot en Telegram y presionamos START para activarlo. Con esto, nuestro bot ya quedó listo para interactuar con los usuarios en Telegram.
+
