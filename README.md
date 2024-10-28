@@ -107,7 +107,7 @@ A continuación se presenta el equipo de desarrollo:
       <a href="https://github.com" target="_blank">GitHub</a>
     </td>
     <td align="center">
-      <img src="https://github.com/user-attachments/assets/f039df30-2298-429c-b153-a1cd9671095e" width="100" alt="Paolo Sanchez">
+      <img src="https://github.com/user-attachments/assets/174bf52e-2aa2-4b52-aaca-095ea282ecf5" width="100" alt="Paolo Sanchez">
       <br>
       <strong>Paolo Sanchez </strong>
       <br>
