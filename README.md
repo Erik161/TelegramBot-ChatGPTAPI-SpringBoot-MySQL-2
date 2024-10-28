@@ -91,15 +91,15 @@ A continuación se presenta el equipo de desarrollo:
 <table>
   <tr>
     <td align="center">
-      <img src="https://via.placeholder.com/100" width="100" alt="Erick">
+      <img src="https://github.com/user-attachments/assets/c2caed80-a81f-4909-ba01-0e98b1c086eb" width="100" alt="Erick Hernandez ">
       <br>
       <strong>Erick</strong>
       <br>
       <a href="https://linkedin.com" target="_blank">LinkedIn</a> |
-      <a href="https://twitter.com" target="_blank">Twitter</a>
+      <a href="https://twitter" target="_blank">Twitter</a>
     </td>
     <td align="center">
-      <img src="https://via.placeholder.com/100" width="100" alt="kimberly">
+      <img src="https://github.com/user-attachments/assets/fd52886b-245f-40a0-b11b-e49423f13939" width="100" alt="Kimberly Villeda">
       <br>
       <strong>kimberly villeda </strong>
       <br>
@@ -107,7 +107,7 @@ A continuación se presenta el equipo de desarrollo:
       <a href="https://github.com" target="_blank">GitHub</a>
     </td>
     <td align="center">
-      <img src="https://github.com/user-attachments/assets/f039df30-2298-429c-b153-a1cd9671095e" width="100" alt="paolo">
+      <img src="https://github.com/user-attachments/assets/f039df30-2298-429c-b153-a1cd9671095e" width="100" alt="Paolo Sanchez">
       <br>
       <strong>paolo</strong>
       <br>
