@@ -118,10 +118,15 @@
 </table>
 
 
-Guía para Integrar un Bot de Telegram en Spring Boot
 
+
+                                                               Guía de Integración del Bot de Telegram
+
+                                                  
 1. Seleccionamos la tecnología adecuada
 Para integrar un bot en nuestra aplicación, decidimos usar la API de bots de Telegram. Esta opción nos pareció confiable y tiene una documentación detallada. Nos aseguramos de revisarla bien para entender sus capacidades y requisitos técnicos; pueden verla https://core.telegram.org/bots
+
+
 
 2 . Agregamos la dependencia de Telegram Bots en nuestro proyecto
 Para que nuestra aplicación de Spring Boot se comunique con Telegram, incluimos una dependencia en el archivo pom.xml. Esta dependencia (telegrambots) contiene las herramientas necesarias para que el bot funcione con Telegram. La configuración es la siguiente:
@@ -136,12 +141,14 @@ Para que nuestra aplicación de Spring Boot se comunique con Telegram, incluimos
 3. Creamos un paquete llamado service en el proyecto
 Para mantener el código organizado, creamos un paquete llamado service, donde incluimos la clase principal de integración del bot. Esta clase gestiona la lógica de interacción con Telegram, y decidimos llamarla TelegramBotService, aunque cualquier otro nombre claro también hubiera funcionado.
 
+
 4. Extendimos la clase TelegramLongPollingBot
 En la clase TelegramBotService, la hicimos extender TelegramLongPollingBot, una clase de la API que se encarga de recibir y procesar los mensajes. Esta herencia simplifica nuestro desarrollo, permitiéndonos enfocarnos en definir las respuestas que queremos que dé el bot.
 
 public class TelegramBotService extends TelegramLongPollingBot {
     // Aquí va la implementación del bot
 }
+
 5. Sobrescribimos los métodos clave para configurar el bot
 Para que el bot funcionara correctamente, sobrescribimos los métodos getBotUsername y getBotToken. getBotUsername devuelve el nombre del bot, y getBotToken contiene el token de autenticación. Configuramos estos métodos para devolver el nombre y el token específicos de nuestro bot:
 @Override
