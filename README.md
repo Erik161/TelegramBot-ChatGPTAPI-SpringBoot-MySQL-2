@@ -93,26 +93,26 @@ A continuación se presenta el equipo de desarrollo:
     <td align="center">
       <img src="https://github.com/user-attachments/assets/c2caed80-a81f-4909-ba01-0e98b1c086eb" width="100" alt="Erick Hernandez ">
       <br>
-      <strong>Erick</strong>
+      <strong>Erick Hernandez</strong>
       <br>
-      <a href="https://linkedin.com" target="_blank">LinkedIn</a> |
-      <a href="https://twitter" target="_blank">Twitter</a>
+     <a href="https://github.com" target="_blank">GitHub</a>|
+      <a href="" target="_blank"
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/fd52886b-245f-40a0-b11b-e49423f13939" width="100" alt="Kimberly Villeda">
       <br>
       <strong>kimberly villeda </strong>
       <br>
-      <a href="https://linkedin.com" target="_blank">LinkedIn</a> |
+      <a href="" target="_blank" |
       <a href="https://github.com" target="_blank">GitHub</a>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/f039df30-2298-429c-b153-a1cd9671095e" width="100" alt="Paolo Sanchez">
       <br>
-      <strong>paolo</strong>
+      <strong>Paolo Sanchez </strong>
       <br>
-      <a href="https://linkedin.com" target="_blank">LinkedIn</a> |
-      <a href="https://instagram.com" target="_blank">Instagram</a>
+      <a href="https://github.com" target="_blank">GitHub</a>|
+      <a href="" target="_blank"
     </td>
   </tr>
 </table>
