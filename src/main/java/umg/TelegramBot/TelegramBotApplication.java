@@ -8,6 +8,10 @@ import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 import umg.TelegramBot.Service.TelegramBotService;
 
+import org.springframework.cache.annotation.EnableCaching;
+
+@EnableCaching
+
 @SpringBootApplication
 public class TelegramBotApplication implements CommandLineRunner {
 
