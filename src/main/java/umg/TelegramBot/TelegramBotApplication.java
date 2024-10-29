@@ -9,6 +9,7 @@ import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 import umg.TelegramBot.Service.TelegramBotService;
 
 @SpringBootApplication
+
 public class TelegramBotApplication implements CommandLineRunner {
 
 	@Autowired
