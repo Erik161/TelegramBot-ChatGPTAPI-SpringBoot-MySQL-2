@@ -19,6 +19,9 @@ public class TelegramBotService extends TelegramLongPollingBot {
 
     @Autowired
     private OpenAIService openAIService;
+    
+    @Autowired
+    private ClienteService clienteService;
 
     @Override
     public void onUpdateReceived(Update update) {
@@ -28,6 +31,12 @@ public class TelegramBotService extends TelegramLongPollingBot {
             long chatId = update.getMessage().getChatId();
 
             System.out.println("Mensaje recibido: " + messageTextReceived);
+
+            // Obtener el nombre del usuario
+            String nombreUsuario = update.getMessage().getFrom().getFirstName();
+
+            // Guardar el nombre del usuario en la base de datos
+            clienteService.guardarCliente(nombreUsuario);
 
             // Obtener la respuesta de OpenAI
             String botResponse = openAIService.getChatResponse(messageTextReceived);
