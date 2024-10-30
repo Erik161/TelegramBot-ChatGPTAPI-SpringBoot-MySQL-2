@@ -52,9 +52,10 @@
     </td>
      <td>
       <a href="#">
-        <img alt="" src="https://logovtor.com/wp-content/uploads/2020/10/vercel-inc-logo-vector.png" width="100">
+        <img alt="" src="https://github.com/user-attachments/assets/d08be450-c22b-486f-9918-48fc7836c4f0" width="100">
       </a>
     </td>
+
     </td>
        
   </tr>
@@ -165,4 +166,40 @@ Para obtener el nombre y el token necesarios, utilizamos BotFather, el bot ofici
 
 7. Activamos el bot en Telegram
 Finalmente, abrimos el bot en Telegram y presionamos START para activarlo. Con esto, nuestro bot ya quedó listo para interactuar con los usuarios en Telegram.
+
+
+# Documentación del Servicio OpenAIService
+
+## Descripción General
+
+El `OpenAIService` es un componente del proyecto desarrollado en Spring Boot, diseñado para gestionar las interacciones con la API de OpenAI. Este servicio permite el envío de mensajes al modelo de OpenAI y realiza el almacenamiento tanto de las solicitudes como de las respuestas en una base de datos Redis. Este enfoque facilita el almacenamiento y la recuperación de datos, proporcionando una solución eficiente y escalable para las consultas de los usuarios.
+
+## Requisitos Previos
+
+En el desarrollo del servicio, el equipo consideró ciertos requisitos previos que garantizan su correcto funcionamiento:
+
+- Se partió de un proyecto Spring Boot previamente configurado.
+- Se utilizó una clave API de OpenAI válida para las solicitudes.
+- Redis fue implementado como solución de almacenamiento, estando operativo localmente o en un servidor accesible.
+- Las credenciales para OpenAI y Redis fueron configuradas adecuadamente en el archivo `application.properties` del proyecto.
+
+## Configuración
+
+### Archivo `application.properties`
+
+En el archivo de configuración `application.properties`, se añadieron las siguientes propiedades para establecer las credenciales necesarias:
+
+```properties
+# Clave de la API de OpenAI
+openai.api.key=TU_CLAVE_API_DE_OPENAI
+
+# Configuración de Redis
+spring.redis.host=localhost
+spring.redis.port=6379```
+
+
+
+
+
+
 
