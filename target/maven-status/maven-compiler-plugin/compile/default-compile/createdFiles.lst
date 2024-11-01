@@ -1,0 +1,7 @@
+umg\TelegramBot\Controller\RedisCheckController.class
+umg\TelegramBot\Service\TelegramBotService.class
+umg\TelegramBot\Service\OpenAIService.class
+umg\TelegramBot\TelegramBotApplication.class
+umg\TelegramBot\RedisConfig.class
+umg\TelegramBot\Service\SendMessage.class
+umg\TelegramBot\Service\TelegramApiException.class
