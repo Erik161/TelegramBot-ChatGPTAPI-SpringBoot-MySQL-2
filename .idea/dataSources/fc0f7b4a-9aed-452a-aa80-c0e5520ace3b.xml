@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="0@localhost">
+  <database-model serializer="dbm" dbms="REDIS" family-id="REDIS" format-version="4.53">
+    <root id="1">
+      <ServerVersion>5.0.14.1</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="0">
+      <Current>1</Current>
+    </schema>
+    <schema id="3" parent="1" name="1"/>
+    <schema id="4" parent="1" name="10"/>
+    <schema id="5" parent="1" name="11"/>
+    <schema id="6" parent="1" name="12"/>
+    <schema id="7" parent="1" name="13"/>
+    <schema id="8" parent="1" name="14"/>
+    <schema id="9" parent="1" name="15"/>
+    <schema id="10" parent="1" name="2"/>
+    <schema id="11" parent="1" name="3"/>
+    <schema id="12" parent="1" name="4"/>
+    <schema id="13" parent="1" name="5"/>
+    <schema id="14" parent="1" name="6"/>
+    <schema id="15" parent="1" name="7"/>
+    <schema id="16" parent="1" name="8"/>
+    <schema id="17" parent="1" name="9"/>
+    <collection id="18" parent="2" name="client:1732520080"/>
+    <collection id="19" parent="2" name="client_state:1732520080"/>
+    <collection id="20" parent="2" name="request:13e33cc2-5a36-4fc3-ad7d-dc6d96f26880"/>
+    <collection id="21" parent="2" name="request:527c773b-766f-4ff8-ad16-6c651e0d52b4"/>
+    <collection id="22" parent="2" name="request:536bf48f-42c6-4f94-a709-191ffa53abd3"/>
+    <collection id="23" parent="2" name="request:7f5abb63-f180-4f11-87d6-7bafbdb626eb"/>
+    <collection id="24" parent="2" name="request:a95effe0-c453-48f6-a717-2124ee2cc72e"/>
+    <collection id="25" parent="2" name="request:adce4a92-83de-434a-9a5d-eae9c8ecf1c3"/>
+    <collection id="26" parent="2" name="request:b269b2d8-7a79-45e6-98c7-ab8cb2dd9a5e"/>
+    <collection id="27" parent="2" name="request:ef13564c-43e7-4fff-aac1-5abf00d24e06"/>
+    <collection id="28" parent="2" name="sample_jobQueue:ticket:101"/>
+    <collection id="29" parent="2" name="sample_jobQueue:ticket:102"/>
+    <collection id="30" parent="2" name="sample_jobQueue:ticket:103"/>
+    <collection id="31" parent="2" name="sample_jobQueue:waitingList"/>
+    <collection id="32" parent="2" name="sample_leaderboard:tetris"/>
+    <collection id="33" parent="2" name="sample_session:012345678"/>
+    <collection id="34" parent="2" name="sample_session:112233445"/>
+    <collection id="35" parent="2" name="sample_session:123456789"/>
+    <collection id="36" parent="2" name="sample_session:234567890"/>
+    <collection id="37" parent="2" name="sample_session:334455667"/>
+    <collection id="38" parent="2" name="sample_session:345678901"/>
+    <collection id="39" parent="2" name="sample_session:456789012"/>
+    <collection id="40" parent="2" name="sample_session:556677889"/>
+    <collection id="41" parent="2" name="sample_session:567890123"/>
+    <collection id="42" parent="2" name="sample_session:678901234"/>
+    <collection id="43" parent="2" name="sample_session:778899001"/>
+    <collection id="44" parent="2" name="sample_session:789012345"/>
+    <collection id="45" parent="2" name="sample_session:890123456"/>
+    <collection id="46" parent="2" name="sample_session:901234567"/>
+    <collection id="47" parent="2" name="sample_session:990011223"/>
+    <collection id="48" parent="2" name="user:1732520080"/>
+    <collection id="49" parent="2" name="user_state:1732520080"/>
+  </database-model>
+</dataSource>
