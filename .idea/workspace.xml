@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1458223-0378-4954-890c-aac1fb56d876" name="Changes" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/umg/TelegramBot/Controller/RedisCheckController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/umg/TelegramBot/RedisConfig.java" afterDir="false" />
@@ -13,6 +14,10 @@
       <change afterPath="$PROJECT_DIR$/src/main/java/umg/TelegramBot/TelegramBotApplication.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/umg/TelegramBot/TelegramBotApplicationTests.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+>>>>>>> ec1a5babdcd378694ccd2d973d7e900f4e177bb3
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +61,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;HTTP Request.generated-requests | #1.executor&quot;: &quot;Run&quot;,
@@ -89,6 +95,41 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RunManager" selected="HTTP Request.generated-requests | #1">
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "HTTP Request.generated-requests | #1.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.TelegramBotApplication.executor": "Debug",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Alfredo Villeda/Desktop/TelegramBot-ChatGPTAPI-SpringBoot-MySQL-2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RunManager" selected="Spring Boot.TelegramBotApplication">
+>>>>>>> ec1a5babdcd378694ccd2d973d7e900f4e177bb3
     <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -101,8 +142,14 @@
       </method>
     </configuration>
     <configuration name="TelegramBotApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+<<<<<<< HEAD
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="TelegramBot" />
+=======
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../Program Files/Java/jdk-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+>>>>>>> ec1a5babdcd378694ccd2d973d7e900f4e177bb3
       <option name="SPRING_BOOT_MAIN_CLASS" value="umg.TelegramBot.TelegramBotApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -119,8 +166,13 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
+<<<<<<< HEAD
         <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
         <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+=======
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
+>>>>>>> ec1a5babdcd378694ccd2d973d7e900f4e177bb3
       </set>
     </attachedChunks>
   </component>
@@ -148,6 +200,11 @@
       <workItem from="1730216761011" duration="1816000" />
       <workItem from="1730223144378" duration="6453000" />
       <workItem from="1730242845870" duration="4366000" />
+<<<<<<< HEAD
+=======
+      <workItem from="1730345898818" duration="1225000" />
+      <workItem from="1730432570434" duration="1226000" />
+>>>>>>> ec1a5babdcd378694ccd2d973d7e900f4e177bb3
     </task>
     <servers />
   </component>
