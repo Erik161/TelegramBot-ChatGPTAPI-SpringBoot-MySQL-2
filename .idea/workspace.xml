@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a1458223-0378-4954-890c-aac1fb56d876" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,17 +42,17 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Erik161&quot;
-  }
-}</component>
+      &quot;lastFilter&quot;: {
+        &quot;state&quot;: &quot;OPEN&quot;,
+        &quot;assignee&quot;: &quot;Erik161&quot;
+      }
+    }</component>
   <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Erik161/TelegramBot-ChatGPTAPI-SpringBoot-MySQL-2.git&quot;,
-    &quot;accountId&quot;: &quot;c4982a9f-acdd-4540-bb32-81710e024171&quot;
-  }
-}</component>
+      &quot;selectedUrlAndAccountId&quot;: {
+        &quot;url&quot;: &quot;https://github.com/Erik161/TelegramBot-ChatGPTAPI-SpringBoot-MySQL-2.git&quot;,
+        &quot;accountId&quot;: &quot;c4982a9f-acdd-4540-bb32-81710e024171&quot;
+      }
+    }</component>
   <component name="JpbToolWindowState">
     <option name="isToolWindowVisible" value="false" />
   </component>
@@ -67,8 +68,8 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 8
-}</component>
+      &quot;associatedIndex&quot;: 8
+    }</component>
   <component name="ProjectId" id="2npQF0surXlzoO0r1KrEG57r1a2" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -83,8 +84,8 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.TelegramBotApplication (1).executor": "Debug",
-    "Spring Boot.TelegramBotApplication.executor": "Run",
-    "git-widget-placeholder": "bdcache",
+    "Spring Boot.TelegramBotApplication.executor": "Debug",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/PROYECTOSJAVA/TelegramBot-ChatGPTAPI-SpringBoot-MySQL-2",
     "node.js.detected.package.eslint": "true",
@@ -120,6 +121,8 @@
       </method>
     </configuration>
     <configuration name="TelegramBotApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../Program Files/Java/jdk-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="TelegramBot" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="umg.TelegramBot.TelegramBotApplication" />
@@ -169,6 +172,8 @@
       <workItem from="1730216761011" duration="1816000" />
       <workItem from="1730223144378" duration="6453000" />
       <workItem from="1730242845870" duration="4366000" />
+      <workItem from="1730345898818" duration="1225000" />
+      <workItem from="1730432570434" duration="1226000" />
       <workItem from="1730251844767" duration="426000" />
       <workItem from="1730252596746" duration="7289000" />
       <workItem from="1730297249703" duration="652000" />
