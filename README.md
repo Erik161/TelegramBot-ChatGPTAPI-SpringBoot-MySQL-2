@@ -139,3 +139,43 @@ Se probaron los comandos `/start` y `/end` en el bot para confirmar que las sesi
 
 https://github.com/user-attachments/assets/4beaac34-1d08-42bb-8fc4-d1841841f176
 
+
+# 🤖 **Proyecto de Bot de Telegram con OpenAI y Spring Boot**
+
+Un bot de Telegram avanzado que integra la API de OpenAI (ChatGPT) con **Spring Boot**, utilizando **Redis** para la gestión eficiente de sesiones. 🚀
+
+---
+
+## 🔧 **Tecnologías Utilizadas**
+- **Java** ☕: Lenguaje de programación principal.
+- **Spring Boot** 🌱: Framework para crear microservicios.
+- **Redis** 🧰: Sistema de almacenamiento en caché.
+- **API de Telegram** 📬: Para la interacción con los usuarios.
+- **API de OpenAI** 🤖: Para respuestas inteligentes basadas en IA.
+
+---
+
+## 💡 **Características Destacadas**
+✨ Gestión de sesiones de usuario con Redis.  
+✨ Captura y almacenamiento del nombre del usuario en Redis para personalizar las interacciones.  
+✨ Registro de solicitudes y respuestas de los usuarios para un historial de consultas.  
+✨ Respuestas impulsadas por inteligencia artificial gracias a la API de OpenAI.  
+✨ **Mejora destacada**: Implementación del **Historial de Conexiones de Usuarios** mediante la creación de una entidad `UserSession` para registrar el inicio y fin de cada sesión. 
+
+---
+
+## 📚 **Propósito del Proyecto**
+Este proyecto fue creado para demostrar cómo **integrar servicios de IA** en aplicaciones de Telegram, con un enfoque en el uso eficiente de **Redis** para el manejo de sesiones y datos temporales. También captura el nombre del usuario y almacena tanto las preguntas como las respuestas en Redis para un análisis posterior y mejor trazabilidad.
+
+---
+
+## 👥 **Contribuciones**
+🙌 ¡Tu participación es bienvenida! Haz un fork del repositorio, trabaja en tus mejoras y envía un pull request. ¡Juntos podemos hacer que este proyecto sea aún mejor!
+
+---
+
+✨ **¡Gracias por visitar este proyecto y por tu interés!** ✨
+
+
+
+
