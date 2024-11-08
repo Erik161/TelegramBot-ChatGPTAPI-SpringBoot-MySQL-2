@@ -8,7 +8,9 @@ import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
+import umg.TelegramBot.Model.UserSession;
 
+import java.util.Date;
 import java.util.UUID;
 
 @Service
@@ -26,66 +28,83 @@ public class TelegramBotService extends TelegramLongPollingBot {
     @Autowired
     private RedisTemplate<String, Object> redisTemplate;
 
-    // Constantes para manejar el estado del cliente
     private static final String CLIENT_STATE_PREFIX = "client_state:";
     private static final String CLIENT_NAME_PREFIX = "client:";
     private static final String STATE_WAITING_FOR_NAME = "WAITING_FOR_NAME";
     private static final String STATE_WAITING_FOR_QUESTION = "WAITING_FOR_QUESTION";
 
+    // Iniciar la sesión del usuario y guardar en Redis
+    private void startUserSession(long chatId) {
+        String sessionId = UUID.randomUUID().toString();
+        UserSession userSession = new UserSession(sessionId, chatId, new Date().toString());
+
+        redisTemplate.opsForHash().put("session:" + sessionId, "chatId", chatId);
+        redisTemplate.opsForHash().put("session:" + sessionId, "startTime", userSession.getStartTime());
+        redisTemplate.opsForValue().set("current_session:" + chatId, sessionId);
+    }
+
+    // Finalizar la sesión del usuario en Redis
+    private void endUserSession(long chatId) {
+        String sessionId = (String) redisTemplate.opsForValue().get("current_session:" + chatId);
+        if (sessionId != null) {
+            redisTemplate.opsForHash().put("session:" + sessionId, "endTime", new Date().toString());
+            redisTemplate.delete("current_session:" + chatId);
+        } else {
+            System.out.println("No se encontró una sesión activa para el chatId: " + chatId);
+        }
+    }
+
     @Override
     public void onUpdateReceived(Update update) {
         if (update.hasMessage() && update.getMessage().hasText()) {
-            String messageTextReceived = update.getMessage().getText();
             long chatId = update.getMessage().getChatId();
+            String messageText = update.getMessage().getText();
 
-            // Claves para Redis
-            String redisClientKey = CLIENT_NAME_PREFIX + chatId;
-            String redisStateKey = CLIENT_STATE_PREFIX + chatId;
-
-            // Obtener el estado actual del cliente
-            String clientState = (String) redisTemplate.opsForValue().get(redisStateKey);
-
-            // Si se recibe el comando /start o el estado es nulo, preguntar por el nombre
-            if (messageTextReceived.equalsIgnoreCase("/start") || clientState == null) {
-                redisTemplate.opsForValue().set(redisStateKey, STATE_WAITING_FOR_NAME);
-                sendMessage(chatId, "Hola, ¿cuál es tu nombre?");
+            if ("/start".equalsIgnoreCase(messageText)) {
+                startUserSession(chatId);
+                handleInitialInteraction(chatId);
                 return;
             }
 
-            // Manejar el estado de espera del nombre
-            if (clientState.equals(STATE_WAITING_FOR_NAME)) {
-                // Guardar el nombre del cliente en Redis
-                redisTemplate.opsForValue().set(redisClientKey, messageTextReceived);
-
-                // Cambiar el estado a "esperando la pregunta"
-                redisTemplate.opsForValue().set(redisStateKey, STATE_WAITING_FOR_QUESTION);
-
-                // Responder al cliente y pedir la pregunta
-                sendMessage(chatId, "Hola " + messageTextReceived + ", ¿cuál es tu pregunta?");
+            if ("/end".equalsIgnoreCase(messageText)) {
+                endUserSession(chatId);
                 return;
             }
 
-            // Manejar el estado de espera de la pregunta
-            if (clientState.equals(STATE_WAITING_FOR_QUESTION)) {
-                // Obtener el nombre del cliente de Redis
-                String clientName = (String) redisTemplate.opsForValue().get(redisClientKey);
-
-                // Obtener la respuesta de OpenAI
-                String botResponse = openAIService.getChatResponse(messageTextReceived);
-
-                // Generar un ID único para la solicitud
-                String requestId = UUID.randomUUID().toString();
-                String redisRequestKey = "request:" + requestId;
-
-                // Guardar la solicitud y respuesta en Redis
-                redisTemplate.opsForHash().put(redisRequestKey, "question", messageTextReceived);
-                redisTemplate.opsForHash().put(redisRequestKey, "response", botResponse);
-                redisTemplate.opsForHash().put(redisRequestKey, "client", chatId);
-
-                // Responder al cliente con la respuesta de ChatGPT
-                sendMessage(chatId, botResponse);
-            }
+            handleUserInteraction(chatId, messageText);
         }
+    }
+
+    // Manejar la interacción inicial con el usuario
+    private void handleInitialInteraction(long chatId) {
+        redisTemplate.opsForValue().set(CLIENT_STATE_PREFIX + chatId, STATE_WAITING_FOR_NAME);
+        sendMessage(chatId, "Hola, ¿cuál es tu nombre?");
+    }
+
+    // Manejar la interacción posterior con el usuario
+    private void handleUserInteraction(long chatId, String messageText) {
+        String clientState = (String) redisTemplate.opsForValue().get(CLIENT_STATE_PREFIX + chatId);
+        String redisClientKey = CLIENT_NAME_PREFIX + chatId;
+
+        if (clientState == null) {
+            handleInitialInteraction(chatId);
+        } else if (STATE_WAITING_FOR_NAME.equals(clientState)) {
+            redisTemplate.opsForValue().set(redisClientKey, messageText);
+            redisTemplate.opsForValue().set(CLIENT_STATE_PREFIX + chatId, STATE_WAITING_FOR_QUESTION);
+            sendMessage(chatId, "Hola " + messageText + ", ¿cuál es tu pregunta?");
+        } else if (STATE_WAITING_FOR_QUESTION.equals(clientState)) {
+            String botResponse = openAIService.getChatResponse(messageText);
+            saveUserQuery(chatId, messageText, botResponse);
+            sendMessage(chatId, botResponse);
+        }
+    }
+
+    // Guardar la consulta del usuario en Redis
+    private void saveUserQuery(long chatId, String question, String response) {
+        String requestId = UUID.randomUUID().toString();
+        redisTemplate.opsForHash().put("request:" + requestId, "question", question);
+        redisTemplate.opsForHash().put("request:" + requestId, "response", response);
+        redisTemplate.opsForHash().put("request:" + requestId, "client", chatId);
     }
 
     // Método auxiliar para enviar mensajes al cliente
