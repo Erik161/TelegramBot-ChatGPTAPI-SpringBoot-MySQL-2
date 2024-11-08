@@ -22,4 +22,9 @@ public class RedisCheckController {
     public Map<Object, Object> verificarSolicitud(@RequestParam String requestId) {
         return redisTemplate.opsForHash().entries("request:" + requestId);
     }
+
+    @GetMapping("/verificarSesion")
+    public Map<Object, Object> verificarSesion(@RequestParam String sessionId) {
+        return redisTemplate.opsForHash().entries("session:" + sessionId);
+    }
 }
